@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const touristPacks = [
+  {
+    name: 'Wild & Free',
+    description: `+ Carpa para 4
+    + Kit Anafe a gas
+    + Botiquin P. Aux.`,
+    image: 'wild-pack.png',
+  }, 
+  {
+    name: 'Night',
+    description: `+ Farol Camping
+    + Repelente Mosquito
+    + Guitarra
+    + Botiquin P. Aux.`,
+    image: 'night-pack.png',
+  },   
+  {
+    name: 'Fishing',
+    description: `+ 2 Cañas de Pesca
+    + Repelente Mosquito
+    + Kit Anafe a gas
+    + Botiquin P. Aux.`,
+    image: 'fishing-pack.png',
+  },   
+  {
+    name: 'Camping',
+    description: `+ Carpa para 4
+    + Kit Anafe a gas
+    + Farol Camping
+    + Repelente Mosquito
+    + Guitarra
+    + Botiquin P. Aux.`,
+    image: 'camping-pack.png',
+  }, 
+]
+---
+
+<Layout>
+	<div class="max-w-7xl m-auto grid grid-cols-2 lg:grid-cols-4 gap-8 py-20 px-4">
+    {
+      touristPacks.map((pack) => (
+        <article class="flex flex-col justify-center items-center gap-4 text-center">
+          <div class="aspect-square w-full max-w-48">
+            <img src={`/${pack.image}`} alt={pack.name} class="object-contain w-full h-full" />
+          </div>
+          <div class="text-primary">
+            <h1 class="font-light uppercase">{pack.name}</h1>
+            <h2 class="font-bold text-3xl uppercase italic -mt-2">Pack</h2>
+          </div>
+          <p class="text-sm text-gray-500 whitespace-pre-line">{pack.description}</p>
+        </article>
+      ))
+    }
+  </div>
+</Layout>

@@ -1,0 +1,46 @@
+---
+
+const currentPath = Astro.url.pathname;
+
+const nav = 
+[
+  { name: 'Home', href: '/' },
+  { name: 'Fleet', href: '/fleet' },
+  { name: 'Tourist Packs', href: '/tourist-packs' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Promos', href: '/promos' },
+]
+
+---
+<header class="bg-primary text-white">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-between items-start 
+  lg:items-center py-6 gap-4 ">
+    <div>
+      <img src="./logo.svg" alt="logo" class="h-16 lg:h-20" />
+    </div>
+
+    <div class="absolute right-4 top-8 lg:hidden hamburger">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-8 w-8" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+    </div>
+  
+    <nav class="hidden lg:block">
+      <ul class="uppercase flex-col lg:flex-row items-start justify-end gap-y-2 gap-x-8 py-4 lg:py-0 flex text-sm">
+        {
+          nav.map((item) => (
+            <li><a href={item.href} class={`underline-offset-8 tracking-wider decoration-[0.20rem] ${currentPath === item.href ? 'underline' : 'hover:underline'}`}>{item.name}</a></li>
+          ))
+        }
+         <a href="#contact" class="hover:underline underline-offset-8 tracking-wider decoration-[0.20rem]">Contact</a>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+    const nav = document.querySelector('nav') as HTMLElement;
+    const hamburger = document.querySelector('.hamburger') as HTMLElement;
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('hidden');
+    });
+</script>
