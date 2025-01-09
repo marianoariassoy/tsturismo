@@ -6,6 +6,10 @@ export default {
       colors: {
         primary: "#e63c1f",
       },
+      fontFamily: {
+        sans: ["Kanit", "sans-serif"],
+        serif: ["Kanit", "serif"],
+      },
     },
   },
   plugins: [],
