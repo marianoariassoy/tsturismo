@@ -1,7 +1,67 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const touristPacks = [
+  {
+    name: 'Seg Premium Cat p/x/k',
+    description: `SEG PREMIUM CAT p/x/k - Daños contra terceros, cristales, colisión. Asistencia 24/7. Reducción de la garantica/bloqueo/Deposito al 50%`,
+    image: 'car.png',
+    price: '$25.900,00 p/dia',
+  }, 
+  {
+    name: 'Seg Premium Cat p/x/k',
+    description: `SEG PREMIUM CAT p/x/k - Daños contra terceros, cristales, colisión. Asistencia 24/7. Reducción de la garantica/bloqueo/Deposito al 50%`,
+    image: 'car.png',
+    price: '$25.900,00 p/dia',
+  }, 
+  {
+    name: 'Seg Premium Cat p/x/k',
+    description: `SEG PREMIUM CAT p/x/k - Daños contra terceros, cristales, colisión. Asistencia 24/7. Reducción de la garantica/bloqueo/Deposito al 50%`,
+    image: 'car.png',
+    price: '$25.900,00 p/dia',
+  }, 
+  {
+    name: 'Seg Premium Cat p/x/k',
+    description: `SEG PREMIUM CAT p/x/k - Daños contra terceros, cristales, colisión. Asistencia 24/7. Reducción de la garantica/bloqueo/Deposito al 50%`,
+    image: 'car.png',
+    price: '$25.900,00 p/dia',
+  }, 
+  {
+    name: 'Seg Premium Cat p/x/k',
+    description: `SEG PREMIUM CAT p/x/k - Daños contra terceros, cristales, colisión. Asistencia 24/7. Reducción de la garantica/bloqueo/Deposito al 50%`,
+    image: 'car.png',
+    price: '$25.900,00 p/dia',
+  }, 
+  {
+    name: 'Seg Premium Cat p/x/k',
+    description: `SEG PREMIUM CAT p/x/k - Daños contra terceros, cristales, colisión. Asistencia 24/7. Reducción de la garantica/bloqueo/Deposito al 50%`,
+    image: 'car.png',
+    price: '$25.900,00 p/dia',
+  }, 
+  
+  
+
+]
 ---
 
-<Layout>
-pricing
+<Layout title="Ts Turismo - Pricing">
+	<div class="max-w-7xl m-auto grid grid-cols-2 lg:grid-cols-4 gap-8 py-20 px-4">
+    {
+      touristPacks.map((pack) => (
+        <article class="flex flex-col justify-center items-center gap-4 text-center shadow bg-slate-100 rounded-lg aspect-square text-sm p-8">
+          <div class="aspect-square w-full max-w-20">
+            <img src={`/${pack.image}`} alt={pack.name} class="object-contain w-full h-full" />
+          </div>
+          <div>
+            <h1 class="font-bold uppercase">{pack.name}</h1>
+            <p class="text-sm text-black/70">{pack.description}</p>
+          </div>
+          <div class="border border-black p-2 font-bold">
+            {pack.price}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
 </Layout>

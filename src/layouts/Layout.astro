@@ -2,6 +2,7 @@
 const { title } = Astro.props;
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Whatsapp from '../components/Whatsapp.astro';
 ---
 
 <!doctype html>
@@ -17,6 +18,7 @@ import Footer from '../components/Footer.astro';
     <Header />
     <div class="flex-1"><slot /></div>
     <Footer />
+    <Whatsapp />
 	</body>
 </html>
 
