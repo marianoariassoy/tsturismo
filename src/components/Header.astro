@@ -32,9 +32,13 @@ const nav =
       </ul>
     </nav>
   </div>
+  <h1>The current URL is: {Astro.url}</h1>
+<h1>The current URL pathname is: {Astro.url.pathname}</h1>
+<h1>The current URL origin is: {Astro.url.origin}</h1>
 </header>
 
 <script>
+
     const nav = document.querySelector('nav') as HTMLElement;
     const hamburger = document.querySelector('.hamburger') as HTMLElement;
 
