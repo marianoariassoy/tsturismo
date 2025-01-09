@@ -2,6 +2,15 @@
 
 const currentPath = Astro.url.pathname;
 
+function quitarSlashFinal(cadena: string) {
+  if (cadena.endsWith('/')) {
+    return cadena.slice(0, -1);  
+  }
+  return cadena;  
+}
+
+quitarSlashFinal(currentPath)
+
 const nav = 
 [
   { name: 'Home', href: '/' },
@@ -32,9 +41,7 @@ const nav =
       </ul>
     </nav>
   </div>
-  <h1>The current URL is: {Astro.url}</h1>
-<h1>The current URL pathname is: {Astro.url.pathname}</h1>
-<h1>The current URL origin is: {Astro.url.origin}</h1>
+
 </header>
 
 <script>
