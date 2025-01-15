@@ -1,0 +1,19 @@
+.indicators {
+  position: absolute;
+  z-index: 1000;
+}
+.indicators li {
+  margin: 0.25rem !important;
+  width: 17px !important;
+  height: 17px;
+}
+
+.indicators li button::before {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #e63c1f !important;
+}
+
+.active {
+  opacity: 1 !important;
+}

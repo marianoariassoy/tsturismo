@@ -1,45 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Items from './Items';
 
-const touristPacks = [
-  {
-    name: 'Hotel Dique',
-    description: `% Descuento`,
-    image: 'hotel-dique.png',
-  }, 
-  {
-    name: 'Sheraton Hotel',
-    description: `% Descuento`,
-    image: 'sheraton.png',
-  }, 
-  {
-    name: 'La Cabrera',
-    description: `% Descuento`,
-    image: 'lacabrera.png',
-  }, 
-  {
-    name: 'Hidalgo',
-    description: `% Descuento`,
-    image: 'hidalgo.png',
-  }, 
-  
-
-]
 ---
 
 <Layout title="Ts Turismo - Promos">
-	<div class="max-w-7xl m-auto grid grid-cols-2 lg:grid-cols-4 gap-8 py-20 px-4">
-    {
-      touristPacks.map((pack) => (
-        <article class="flex flex-col justify-center items-center gap-4 text-center">
-          <div class="aspect-square w-full max-w-32 lg:max-w-40">
-            <img src={`/${pack.image}`} alt={pack.name} class="object-contain w-full h-full" />
-          </div>
-          <p class="text-sm text-primary">{pack.description}</p>
-        </article>
-      ))
-    }
-  </div>
+
+  <Items client:load />
+  
   <div class="px-4 text-primary text-center text-xl lg:text-3xl font-bold italic mb-20">
     + Alianzas Comerciales
   </div>
