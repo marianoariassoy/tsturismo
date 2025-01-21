@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Fade } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
-const apiUrl = 'http://localhost/sites/tstusismo-backend/api'
+const apiUrl = 'https://tsgroupsa.com.ar/backend/api'
 import Spinner from '../components/Spinner'
 
 const Slider = () => {

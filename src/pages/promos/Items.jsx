@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-const apiUrl = 'http://localhost/sites/tstusismo-backend/api'
+const apiUrl = 'https://tsgroupsa.com.ar/backend/api'
 import Spinner from '../../components/Spinner'
 
 const Items = () => {
