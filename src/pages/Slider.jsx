@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { Fade } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 const apiUrl = 'https://tsgroupsa.com.ar/backend/api'
-import Spinner from '../components/Spinner'
 
 const Slider = () => {
   const [data, setData] = useState(null)
@@ -31,7 +30,7 @@ const Slider = () => {
     pauseOnHover: false
   }
 
-  if (loading) return <Spinner />
+  if (loading) return null
 
   return (
     <div>

@@ -4,7 +4,7 @@ import Slider from './Slider'
 const Home = () => {
   return (
     <section className='max-w-7xl m-auto py-20 px-4 relative'>
-      <div className='max-w-3xl lg:absolute left-0 top-20 -z-10 mb-8 lg:mt-8 animate-fade'>
+      <div className='max-w-3xl lg:absolute left-0 top-20 mb-8 lg:mt-8'>
         <Slider />
       </div>
       <div className='flex items-end flex-col'>
