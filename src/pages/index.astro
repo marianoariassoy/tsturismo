@@ -1,10 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Home from './Home'
+
+const images = [ 
+  '/home/home1.jpg',
+  '/home/home2.jpg',
+  '/home/home3.jpg',
+  '/home/home4.jpg',
+  '/home/home5.jpg',
+]
 ---
 
 <Layout title="Ts Turismo Car & Pick Up Rental">
 
   <Home client:load />
+
+  <footer class="border-primary border-t-[2.5rem] py-8" id="contact">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 gap-2 items-center">
+      {
+        images.map((image, index) => (
+          <div key={index} class="aspect-video">
+            <img src={image} alt=""  class="w-full h-full object-cover" />
+          </div>
+        ))
+      }
+      
+    </div>
+  </footer>
 	
 </Layout>
