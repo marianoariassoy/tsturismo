@@ -18,6 +18,7 @@ const nav =
   { name: 'Tourist Packs', href: '/tourist-packs/' },
   { name: 'Seguros', href: '/seguros/' },
   { name: 'Promos', href: '/promos/' },
+  { name: 'Contacto', href: '/contact/' },
 ]
 
 ---
@@ -38,7 +39,6 @@ const nav =
             <li><a href={item.href} class={`underline-offset-8 tracking-wider decoration-[0.20rem] ${currentPath === item.href ? 'underline' : 'hover:underline'}`}>{item.name}</a></li>
           ))
         }
-         <a href="#" class="scroll hover:underline underline-offset-8 tracking-wider decoration-[0.20rem]">Contact</a>
       </ul>
     </nav>
   </div>

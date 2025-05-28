@@ -41,7 +41,7 @@ const Form = () => {
   }
 
   const Error = () => {
-    return <div className='text-sm mt-1 text-primary'>This field is required</div>
+    return <div className='text-sm mt-1 text-primary'>Este campo es requerido</div>
   }
 
   return (
@@ -49,13 +49,13 @@ const Form = () => {
       {error ? (
         <span className='text-2xl'>Error</span>
       ) : sended ? (
-        <span className='text-3xl font-medium text-primary'>Your message has been sent</span>
+        <span className='text-3xl font-medium text-primary'>Su mensaje fue enviado exitosamente</span>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className='mb-4'>
             <input
               className='w-full border h-11 px-4'
-              placeholder='Name'
+              placeholder='Nombre'
               {...register('name', { required: true })}
             />
             {errors.name && <Error />}
@@ -72,7 +72,7 @@ const Form = () => {
             <div>
               <input
                 className='w-full border h-11  px-4'
-                placeholder='Phone'
+                placeholder='Teléfono'
                 {...register('phone', { required: true })}
               />
               {errors.phone && <Error />}
@@ -80,7 +80,7 @@ const Form = () => {
           </div>
           <textarea
             className='w-full border h-32 p-4 mt-4 mb-2'
-            placeholder='Message'
+            placeholder='Mensaje'
             {...register('message')}
           />
 

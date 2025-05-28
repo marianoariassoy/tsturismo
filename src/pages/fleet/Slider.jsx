@@ -35,7 +35,7 @@ const Slider = () => {
   if (loading) return <Spinner />
 
   return (
-    <div class='max-w-6xl m-auto py-20 px-4 opacity-0 animate-fade-left'>
+    <div class='max-w-7xl m-auto py-20 px-4 opacity-0 animate-fade-left'>
       <Slide {...sliderProperties}>
         {data.map(item => (
           <Item

@@ -1,10 +1,27 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Slider from './Slider';
+import SliderMain from './SliderMain';
+
+  const images = [
+    '/images/flota/1.jpg',
+    '/images/flota/2.jpg',
+    '/images/flota/3.jpg',
+    '/images/flota/4.jpg',
+    '/images/flota/5.jpg',
+    '/images/flota/6.jpg',
+    '/images/flota/7.jpg',
+    '/images/flota/8.jpg' 
+  ]
+
 ---
 
 <Layout title="Ts Turismo - Fleet">
 
+  <div class="w-full h-[60vh] overflow-hidden">
+    <SliderMain client:load images={images} />
+  </div>
+ 
   <Slider client:load />
 
 </Layout>

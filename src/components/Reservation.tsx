@@ -51,7 +51,7 @@ const Reservation = () => {
     <div className='text-3xl font-medium text-primary lg:min-h-[250px]'>Your reservation has been sent</div>
   ) : (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className='border shadow-lg p-4 lg:p-8 rounded-2xl flex flex-col gap-y-4 '>
+      <div className='border shadow-lg p-4 lg:p-8 rounded-2xl flex flex-col gap-y-4 bg-white'>
         <div className='flex flex-col gap-y-2'>
           <div className='flex items-center gap-x-2'>
             <svg
